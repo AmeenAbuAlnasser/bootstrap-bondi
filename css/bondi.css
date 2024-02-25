@@ -1,0 +1,237 @@
+:root{
+    --dark-color:#19283f;
+    --green-color:#33d1cc;
+    --main-btn:#ff3150;
+    --yellow-color:#ffc400;
+    --section-color:#eff7fa;
+
+}
+body{
+    font-family: "Roboto", sans-serif;
+   
+}
+/* start navbar */
+.navbar{
+    background-color: var(--dark-color);
+}
+.navbar .nav-item .nav-link{
+    color: white;
+}
+.navbar .nav-item .nav-link:focus,
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link.active
+{
+    color: var(--green-color);
+}
+.search{
+    color: var(--green-color);
+    border-left: 1px solid var(--green-color);
+}
+.navbar .navbar-toggler{
+    color: white;
+    border-color: white;
+    font-size: 35px;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    border-color: var(--green-color);
+}
+.main-btn{
+    background-color: var(--main-btn);
+    color: var(--yellow-color);
+}
+.main-btn:hover{
+    background-color: var(--main-btn);
+    color:white;
+}
+/* end navbar */
+
+
+/* landing section*/
+.landing{
+    min-height:calc(100vh - 70px);
+    background-color: var(--dark-color);
+}
+
+/* end landing section*/
+
+/* sectiom 3*/
+.section3top::after{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    bottom: -20px;
+    left:50%;
+    transform: translateX(-50%);
+   
+}
+
+.icon-holder{
+    height: 200px;
+}
+.icon-holder svg{
+   left: 50%;
+   transform: translateX(-50%);
+   }
+.icon-holder .number{
+ color: var(--section-color);
+font-size: 12rem;
+}
+.icon-holder .icon{
+    color: var(--green-color);
+   font-size: 4rem;
+   }
+
+   .feat h2{
+    color: var(--yellow-color);
+   }
+
+/* end section3*/
+
+/*  section4*/
+.section4{
+    background-color: var(--section-color); 
+}
+.section4 li{
+    margin-left: 20px;
+padding: 0.5rem 0.8rem;
+cursor: pointer;
+font-size: 15px;
+font-weight: 700;
+}
+.section4 li:not(.active):hover{
+    color:var(--main-btn);
+
+}
+.section4 .active{
+    background-color: var(--main-btn);
+    color: var(--yellow-color);
+    border-radius: 50px; /* Adjust the value to control the roundness of the pill */
+  padding: 10px 20px; /* Adjust the padding to control the size of the pill */
+  display: inline-block; /* Ensures the pill behaves like an inline element */
+}
+.section4 .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.section4 .box::before{
+    content:attr(data-work);
+    background-color: #26cbc4a3;
+    position: absolute;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 800;
+    font-size: 1.5rem;
+    transition: 0.4s;
+    transform: translateX(calc(-100% - 5px));
+}
+
+.section4 .box:hover::before{
+    transform: translateX(0);
+}
+/* end section4*/
+
+/*  section5*/
+.description{
+ 
+}
+/* end section5*/
+
+/* team section */
+.team{
+    background-color: var(--section-color);
+}
+.team h2{
+    color: var(--yellow-color);
+}
+.team h3{
+    background-color: var(--green-color);
+    color: white;
+}
+
+/*end team section */
+
+/* start-project */
+.start-project{
+    background-color: var(--dark-color);
+}
+
+/* END start-project */
+
+.boxLastSection{
+    border: solid 1px var(--section-color);
+}
+
+.subscribe{
+    background-color: #ffc400;
+}
+.subscribe input[type="text"]{
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.subscribe input[type="text"]:focus{
+   outline: none;
+}
+.subscribe ::placeholder{
+    color: white;
+}
+
+.subscribe .btn{
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+.subscribe .btn:hover{
+    background-color: var(--main-btn);
+}
+
+
+/*start footer */
+.footer{
+    background-color: var(--dark-color);
+}
+.facebook{
+   background-color: #1877f2;
+}
+.twitter{
+   background-color: #1da1f2;
+
+}
+.linkedin{
+   background-color: #0a66c2;
+}
+.youtube{
+   background-color: #ff0000;
+}
+.copyright div span{
+    color: var(--green-color);
+}
+.copyright  span{
+    color: var(--yellow-color);
+}
+/*end footer */
+
+.scroll-to-up{
+    position: fixed;
+    right: -40px;
+    bottom: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.scroll-to-up svg{
+    background-color: black;
+    color: var(--main-btn);
+}
+
+.show{
+    right: 10px;
+}
